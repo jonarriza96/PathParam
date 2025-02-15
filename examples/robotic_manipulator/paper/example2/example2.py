@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 import casadi as cs
-from robotic_manipulator.utils import load_pickle, get_package_path
+from examples.robotic_manipulator.src.utils import load_pickle, get_package_path
 
 
 def xidot_funcs():

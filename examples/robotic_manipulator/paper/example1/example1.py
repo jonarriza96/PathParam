@@ -1,5 +1,5 @@
 # %%
-from robotic_manipulator.utils import (
+from examples.robotic_manipulator.src.utils import (
     get_package_path,
     load_pickle,
     plot_two_link_manipulator,

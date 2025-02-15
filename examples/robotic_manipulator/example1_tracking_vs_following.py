@@ -119,6 +119,7 @@ if __name__ == "__main__":
     t_sim = np.arange(0, T_sim, dt)
     N_sim = len(t_sim)
     X_ref = np.zeros((N_sim, 10))
+    xi_ref = np.zeros(N_sim)
     X = np.zeros((N_sim + 1, 8))
     X_pred = np.zeros((N_sim + 1, 8, N))
     U = np.zeros((N_sim, 2))
@@ -175,6 +176,7 @@ if __name__ == "__main__":
         else:
             X[k + 1, :] = x_update
             U[k, :] = u
+            xi_ref[k] = xi_kk
             k += 1
 
         # check if reached end and print status
@@ -205,9 +207,16 @@ if __name__ == "__main__":
     # ------------------------------- Save results ------------------------------- #
     if False:
         save_pickle(
-            path="/Users/jonarrizabalaga/2joint/paper/example1/data",
+            path="/Users/jonarrizabalaga/PathParam/examples/robotic_manipulator/paper/example1/data",
             file_name="tracking_disturbance",
-            data={"X": X, "U": U, "t_sim": t_sim, "path": gamma_eval},
+            data={
+                "X": X,
+                "U": U,
+                "X_ref": X_ref,
+                "t_sim": t_sim,
+                "path": gamma_eval,
+                "xi_ref": xi_ref,
+            },
         )
 
     # --------------------------------- Visualize -------------------------------- #

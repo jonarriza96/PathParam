@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.colorbar import make_axes
 
-from robotic_manipulator.utils import (
+from examples.robotic_manipulator.src.utils import (
     plot_two_link_manipulator,
     load_pickle,
     get_package_path,
