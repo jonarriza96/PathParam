@@ -1,7 +1,7 @@
 # PathParam
 **PathParam — Path-Parametric Planning & Control**
 
-For the implementation details, please check the [paper](https://arxiv.org/pdf/2410.04664), and/or the [website](https://jonarriza96.github.io/Path-Parametric-Planning-Control/).
+For the implementation details, please check the [paper](https://arxiv.org/pdf/2410.04664), and/or the [website](https://path-parametric.github.io/).
 ## Quick Start
 Follow these steps:
 
